@@ -896,148 +896,91 @@ section .title::after {
     font-size: 16px;
   }
 }
-/* Background Image Styling */
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0; /* Align to the left */
-  width: 20%; /* Occupy 20% of the footer */
-  height: 100%; /* Full height */
-  background-image: url('images/back.jpg'); /* Set the background image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
-  background-size: cover; /* Cover the entire area */
-  border: 5px solid crimson; /* Create a red boundary */
-  z-index: -1; /* Place behind the content */
-}
-
-/* Keyframes for the fade-in animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0; /* Start completely transparent */
-  }
-  100% {
-    opacity: 1; /* End fully opaque */
-  }
-}
-
-/* Style for footer title */
-.footer__title {
-  font-weight: bold; /* Make title bold */
-  font-style: italic; /* Make title italic */
-}
-
-/* Style for footer subtitle */
-.footer__subtitle {
-  font-weight: bold; /* Make subtitle bold */
-  font-style: italic; /* Make subtitle italic */
-}
-
-/* Optional: Additional styling for the footer links and social media buttons */
-.footer__link {
-  color: crimson; /* Link color */
-  text-decoration: none; /* No underline on links */
-  font-weight: bold; /* Make links bold */
-  font-style: italic; /* Make links italic */
-}
-
-.footer__link:hover {
-  text-decoration: underline; /* Underline on hover */
-}
-
-/* Social Media Buttons Styling */
-.social-media-buttons a {
-  margin: 0 10px; /* Spacing between social media icons */
-  color: crimson; /* Initial icon color */
-  font-size: 30px; /* Make icons bigger */
-  border: 2px solid #d33737; /* Create a white frame */
-  border-radius: 50%; /* Make the frame circular */
-  padding: 10px; /* Add padding around the icons */
-  transition: color 0.3s ease, transform 0.3s ease; /* Animation for color change and scaling */
-  display: inline-block; /* Ensure proper spacing and alignment */
-}
-
-.social-media-buttons a:hover {
-  color: black; /* Change color on hover */
-  transform: scale(1.1); /* Slightly increase size on hover */
-}
-
-.footer__copy {
-  margin-top: 20px; /* Spacing above copyright text */
-  font-size: 14px; /* Font size for copyright text */
-  font-weight: bold; /* Make copyright text bold */
-  font-style: italic; /* Make copyright text italic */
-}
-
 /* Media Queries for Responsive Design */
 @media (max-width: 480px) {
-  /* Adjust the padding and layout for smaller screens */
+  /* General body font size adjustments */
+  body {
+    font-size: 14px; /* Reduce base font size */
+  }
+
+  /* Adjust padding for containers */
+  .container,
   .max-width {
-    padding: 0 15px;
+    padding: 10px; /* Reduce padding */
   }
 
   /* Navbar adjustments for mobile */
   .navbar .menu li a {
-    font-size: 18px; /* Adjust font size for mobile */
-    margin-left: 10px; /* Reduce margin */
+    font-size: 16px; /* Smaller font size for navbar links */
+    margin-left: 5px; /* Reduced margin */
+    padding: 8px; /* Reduced padding for links */
   }
 
   /* Home section text size adjustments */
   .home .home-content .text-2 {
-    font-size: 35px; /* Decrease font size */
+    font-size: 30px; /* Decrease font size */
+    line-height: 1.2; /* Adjust line height for readability */
   }
 
   .home .home-content .text-3 {
-    font-size: 20px; /* Decrease font size */
+    font-size: 18px; /* Decrease font size */
   }
 
   .home .home-content a {
-    font-size: 16px; /* Decrease font size */
+    font-size: 14px; /* Decrease font size */
     padding: 5px 10px; /* Adjust padding */
   }
 
   /* About section image size adjustments */
   .about .about-content .left img {
-    width: 150px; /* Adjust image width */
-    height: 150px; /* Adjust image height */
+    width: 120px; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
   }
 
   /* Skills section adjustments */
   .skills .skills-content .column {
     width: 100%; /* Full width for smaller screens */
     margin-bottom: 10px; /* Spacing between columns */
+    font-size: 12px; /* Smaller font size for skills */
   }
 
   /* Projects section adjustments */
+  .projects .carousel .card {
+    width: 90%; /* Adjust card width */
+    margin: 0 auto; /* Center cards */
+  }
+
   .projects .carousel .card img {
-    height: 120px; /* Adjust image height */
+    height: 100px; /* Adjust image height */
     width: auto; /* Maintain aspect ratio */
   }
 
   /* Contact section form adjustments */
   .contact .right form .field input,
   .contact .right form .textarea textarea {
-    font-size: 14px; /* Font size for inputs */
+    font-size: 12px; /* Smaller font size for inputs */
+    padding: 8px; /* Adjust padding */
   }
 
   .contact .right form .button button {
-    font-size: 16px; /* Font size for buttons */
-    padding: 8px; /* Adjust padding */
+    font-size: 14px; /* Smaller font size for buttons */
+    padding: 8px 12px; /* Adjust padding */
   }
 
   /* Footer section adjustments */
   .footer {
-    padding: 10px; /* Adjust padding */
+    padding: 10px; /* Adjust footer padding */
   }
 
   /* Footer title and subtitle adjustments */
   .footer__title,
   .footer__subtitle {
-    font-size: 16px; /* Smaller font size for titles */
+    font-size: 14px; /* Smaller font size for titles */
   }
 
   /* Footer copyright text adjustments */
   .footer__copy {
-    font-size: 12px; /* Smaller font size */
+    font-size: 10px; /* Smaller font size for copyright text */
   }
 }
+
