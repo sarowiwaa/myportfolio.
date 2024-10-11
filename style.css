@@ -983,4 +983,19 @@ section .title::after {
     font-size: 10px; /* Smaller font size for copyright text */
   }
 }
+/* About section image adjustments */
+.about .about-content .left img {
+    width: 100%; /* Make the image take full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 220px; /* Optional: Set a maximum width */
+}
+
+/* Projects section image adjustments */
+.projects .carousel .card img {
+    width: 100%; /* Make the image take full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 150px; /* Optional: Set a maximum height */
+    object-fit: cover; /* Ensure the image covers the space without distortion */
+}
+
 
