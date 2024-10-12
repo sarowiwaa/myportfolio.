@@ -997,5 +997,64 @@ section .title::after {
     max-height: 150px; /* Optional: Set a maximum height */
     object-fit: cover; /* Ensure the image covers the space without distortion */
 }
+/* Base Styles for Navbar */
+.navbar {
+    position: relative; /* Allow positioning of child elements */
+    background-color: #fff; /* Background color for navbar */
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+/* Navbar Links */
+.navbar .menu {
+    display: flex; /* Use flexbox for horizontal layout */
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+/* Hide menu items by default on small devices */
+.navbar .menu li {
+    display: none; /* Hide menu items initially */
+}
+
+/* Show menu items when the toggle button is clicked */
+.navbar.active .menu li {
+    display: block; /* Display items when active */
+}
+
+/* Navbar Toggle Button */
+.navbar .toggle-button {
+    display: block; /* Show toggle button */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Responsive Styles */
+@media (max-width: 480px) {
+    .navbar .menu {
+        flex-direction: column; /* Stack menu items vertically */
+        position: absolute; /* Position the menu */
+        top: 60px; /* Position below the navbar */
+        left: 0; /* Align to the left */
+        width: 100%; /* Full width */
+        background-color: #fff; /* Background color */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+        display: none; /* Hide menu by default */
+    }
+
+    /* Show the menu when the navbar has an active class */
+    .navbar.active .menu {
+        display: flex; /* Show menu items when active */
+    }
+
+    .navbar .menu li {
+        padding: 10px; /* Add padding to menu items */
+        border-bottom: 1px solid #ccc; /* Optional: Add a border */
+    }
+
+    .navbar .menu li:last-child {
+        border-bottom: none; /* Remove border from last item */
+    }
+}
+
 
 
